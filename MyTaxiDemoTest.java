@@ -1,6 +1,5 @@
 package com.mytaxi.android_demo.activities;
 
-
 import android.os.SystemClock;
 import android.support.test.espresso.DataInteraction;
 import android.support.test.espresso.ViewInteraction;
@@ -95,10 +94,10 @@ public class MyTaxiDemoTest {
                         isDisplayed()));
         appCompatButton.perform(click());
 
-        /*Wait for a second to load "mytaxi demo" screen after successful login.
+        /*Wait for 3 seconds to load "mytaxi demo" screen after successful login.
          In Espreeso, by registering "Idling Resources" we can validate asynchronous
          operations instead of using "Thread.sleep()" or "SystemClock.sleep()"*/
-        SystemClock.sleep(1000);
+        SystemClock.sleep(3000);
 
         //Tap in the "Search driver here" field
         ViewInteraction appCompatAutoCompleteTextView = onView(
